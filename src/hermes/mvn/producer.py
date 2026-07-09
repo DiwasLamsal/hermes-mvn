@@ -73,8 +73,8 @@ from hermes.utils.zmq_utils import (
 )
 from hermes.base.nodes.producer import Producer
 
-from mvn.src.hermes.mvn.data_container import MvnAnalyzeDataContainer
-from mvn.src.hermes.mvn.data_container import MVN_JOINT_SETUP, MVN_SEGMENT_SETUP, MVN_SENSOR_SETUP
+from hermes.mvn.data_container import MvnAnalyzeDataContainer
+from hermes.mvn.data_container import MVN_JOINT_SETUP, MVN_SEGMENT_SETUP, MVN_SENSOR_SETUP
 
 
 class MvnNetProto(str, Enum):

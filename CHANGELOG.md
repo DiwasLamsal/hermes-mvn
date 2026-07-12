@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [0.3.0](https://github.com/maximyudayev/hermes-mvn/releases/tag/0.3.0) - 2026-07-12
+
+<small>[Compare with 0.2.1](https://github.com/maximyudayev/hermes-mvn/compare/0.2.1...0.3.0)</small>
+
+### Misc
+
+- Chore: updated to macth `HERMES>=0.5.0` ([510accc](https://github.com/maximyudayev/hermes-mvn/commit/510accc2cb92fc6cf4d8085eaf9f827e68976e21) by Maxim Yudayev).
+- Hotfix: wrong import of mvn classes ([44a4b61](https://github.com/maximyudayev/hermes-mvn/commit/44a4b61676095b4c0fcb8879b6a304c234b0556f) by Maxim Yudayev).
+- Hotfix: conflig in utils class naming ([2ca8e0c](https://github.com/maximyudayev/hermes-mvn/commit/2ca8e0c693e7846907275f26cf97950708d14b73) by Maxim Yudayev).
+- Hotfix: API compatibility to `HERMES==0.4.2` ([f3a1c89](https://github.com/maximyudayev/hermes-mvn/commit/f3a1c8952b28bf894a5611f355d23ef4bf38b8c2) by Maxim Yudayev).
+
 ## [0.2.1](https://github.com/maximyudayev/hermes-mvn/releases/tag/0.2.1) - 2026-06-21
 
 <small>[Compare with 0.2.0](https://github.com/maximyudayev/hermes-mvn/compare/0.2.0...0.2.1)</small>

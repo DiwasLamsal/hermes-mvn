@@ -58,7 +58,7 @@ audio_codec_config_filepath: null
 producer_specs:
   - package: "mvn"
     class: "MvnAnalyzeProducer"
-    topic: "mvn"
+    node_id: "mvn"
     settings:
       mvn_setup           : "lower_body"
       sampling_rate_hz    : 60
@@ -73,7 +73,35 @@ producer_specs:
       is_time_code        : True
 
 
-consumer_specs: []
+consumer_specs:
+  - package: "logger"
+    class: "DataLogger"
+    node_id: "data_logger"
+    settings:
+      data_in_specs:
+        - package: "mvn"
+          class: "MvnAnalyzeProducer"
+          node_id: "mvn"
+          topics:
+            # - "xsens_pose"
+            # - "xsens_joints"
+            # - "xsens_com"
+            # - "xsens_linear_segments"
+            # - "xsens_angular_segments"
+            - "xsens_motion_trackers"
+            # - "xsens_time"
+          settings:
+            mvn_setup           : "lower_body"
+            sampling_rate_hz    : 60
+            buf_len             : 6000
+            is_euler            : False
+            is_quaternion       : False
+            is_joint_angles     : False
+            is_linear_segments  : False
+            is_angular_segments : False
+            is_motion_trackers  : True
+            is_com              : False
+            is_time_code        : False
 
 
 pipeline_specs: []

@@ -151,7 +151,7 @@ class MvnAnalyzeProducer(Producer):
 
     def __init__(
         self,
-        topic: str,
+        node_id: str,
         host_ip: str,
         logging_spec: LoggingSpec,
         mvn_ip: Optional[str] = IP_LOOPBACK,
@@ -242,7 +242,7 @@ class MvnAnalyzeProducer(Producer):
         }
 
         super().__init__(
-            topic=topic,
+            node_id=node_id,
             host_ip=host_ip,
             data_out_spec=data_out_spec,
             logging_spec=logging_spec,
@@ -421,9 +421,8 @@ class MvnAnalyzeProducer(Producer):
             )
             return None
 
-        tag: str = "%s.data" % (self.topic)
         self._publish(
-            tag=tag, process_time_s=get_time(), data=data
+            process_time_s=get_time(), new_data=data,
         )
 
         return next_index - 1 if next_index is not None else None
